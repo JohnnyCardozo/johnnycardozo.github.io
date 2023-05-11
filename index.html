@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog de jogos</title>
+    <link rel="stylesheet"href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
     <link rel="stylesheet" href="./styles/style.css">
 </head>
 
@@ -36,6 +37,65 @@
             economia, IA e outras coisas mais que você pode acompanhar aqui
         </p>
     </main>
+
+    <section class="carrossel">
+        <h2 class="carrossel__titulo">Ultimas postagens</h2>
+        <!-- Slider main container -->
+            <div class="swiper">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img class="swiper-img" src="./assets/Dishonored.png">
+                        <div>
+                            <h3>Postagem 1</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec mollis egestas erat. Integer varius pulvinar augue, id convallis urna sollicitudin quis. Nullam facilisis tortor felis, quis ultrices ligula pretium ut. Nunc sed consequat metus, eu pharetra purus. Mauris id suscipit lorem, ac sagittis justo. Nunc rutrum orci sed sollicitudin dictum. Pellentesque euismod, risus tincidunt rhoncus tincidunt, eros urna luctus nibh, vitae tincidunt dolor odio et est. Fusce scelerisque massa eget sapien rutrum condimentum.</p>
+                        </div>
+                        
+                    </div>
+                    <div class="swiper-slide">
+                        <img class="swiper-img" src="./assets/RedStringsClub.png">
+                        <div>
+                            <h3>Postagem 2</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec mollis egestas erat. Integer varius pulvinar augue, id convallis urna sollicitudin quis. Nullam facilisis tortor felis, quis ultrices ligula pretium ut. Nunc sed consequat metus, eu pharetra purus. Mauris id suscipit lorem, ac sagittis justo. Nunc rutrum orci sed sollicitudin dictum. Pellentesque euismod, risus tincidunt rhoncus tincidunt, eros urna luctus nibh, vitae tincidunt dolor odio et est. Fusce scelerisque massa eget sapien rutrum condimentum.</p>
+                        </div>
+                        
+                    </div>
+                    <div class="swiper-slide">
+                        <img class="swiper-img" src="./assets/hades.png">
+                        <div>
+                            <h3>Postagem 3</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec mollis egestas erat. Integer varius pulvinar augue, id convallis urna sollicitudin quis. Nullam facilisis tortor felis, quis ultrices ligula pretium ut. Nunc sed consequat metus, eu pharetra purus. Mauris id suscipit lorem, ac sagittis justo. Nunc rutrum orci sed sollicitudin dictum. Pellentesque euismod, risus tincidunt rhoncus tincidunt, eros urna luctus nibh, vitae tincidunt dolor odio et est. Fusce scelerisque massa eget sapien rutrum condimentum.</p>
+                        </div>
+                        
+                    </div>
+                    <div class="swiper-slide">
+                        <img class="swiper-img" src="./assets/Stelaris.png">
+                        <div>
+                            <h3>Postagem 4</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec mollis egestas erat. Integer varius pulvinar augue, id convallis urna sollicitudin quis. Nullam facilisis tortor felis, quis ultrices ligula pretium ut. Nunc sed consequat metus, eu pharetra purus. Mauris id suscipit lorem, ac sagittis justo. Nunc rutrum orci sed sollicitudin dictum. Pellentesque euismod, risus tincidunt rhoncus tincidunt, eros urna luctus nibh, vitae tincidunt dolor odio et est. Fusce scelerisque massa eget sapien rutrum condimentum.</p>
+                        </div>
+                        
+                    </div>
+                    <div class="swiper-slide">
+                        <img class="swiper-img" src="./assets/disco Elysium.png">
+                        <div>
+                            <h3>Postagem 5</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec mollis egestas erat. Integer varius pulvinar augue, id convallis urna sollicitudin quis. Nullam facilisis tortor felis, quis ultrices ligula pretium ut. Nunc sed consequat metus, eu pharetra purus. Mauris id suscipit lorem, ac sagittis justo. Nunc rutrum orci sed sollicitudin dictum. Pellentesque euismod, risus tincidunt rhoncus tincidunt, eros urna luctus nibh, vitae tincidunt dolor odio et est. Fusce scelerisque massa eget sapien rutrum condimentum.</p>
+                        </div>
+                        
+                    </div>
+                </div>
+                <!-- If we need pagination -->
+                <div class="swiper-pagination"></div>
+            
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            
+                <!-- If we need scrollbar -->
+                <div class="swiper-scrollbar"></div>
+            </div>
+    </section>
     
     <footer class="rodape">
         <p class="rodape__texto">Contatos:</p>
@@ -55,5 +115,25 @@
             </a>
         </div>
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script>
+        const swiper = new Swiper('.swiper', {
+            spaceBetween: 10,
+            slidesPerView: 2,
+            pagination: {
+                el: '.swiper-pagination',
+                type: 'bullets',
+                clickable: true,
+                type: "fraction"
+            },
+            autoplay: {
+                delay: 3000,
+            },
+            centeredSlides: true,
+            centeredSlidesBounds: true,
+            loop: true,
+        });
+    </script>
 </body>
 </html>
