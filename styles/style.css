@@ -1,11 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Press+Start+2P&display=swap');
 
+@import 'header.css';
+@import 'foot.css';
+
 :root {
-    --cor-primaria: #00337C;
-    --cor-secundaria: #1C82AD;
-    --cor-de-fundo: #13005A;
-    --cor-do-texto: #03C988;
+    --cor-primaria: green;
+    --cor-secundaria: greenyellow;
+    --cor-de-fundo: black;
+    --cor-do-texto: greenyellow;
     --cor-hover: red;
 
     --fonte-primaria: 'Press Start 2P', cursive;
@@ -29,56 +32,6 @@ body {
     display: flex;
     flex-direction: column;
     gap: 20px;
-}
-
-.cabecalho {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    margin: 1% 0 0 0;
-}
-
-.logo {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-}
-
-.logo__imagem {
-    width: 10%;
-    min-width: 5rem;
-}
-
-.logo__titulo {
-    display: inline-block;
-    font-size: 4rem;
-    font-family: var(--fonte-primaria);
-}
-
-.navegacao {
-    margin: 2% 0 0 0;
-    padding: 1% 0;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    font-family: var(--fonte-primaria);
-    border-top: 2px solid var(--cor-primaria);
-    border-bottom: 2px solid var(--cor-primaria);
-    gap: 3px;
-
-}
-
-.navegacao__links {
-    text-decoration: none;
-    background-color: var(--cor-primaria);
-    color: var(--cor-secundaria);
-    text-align: center;
-    padding: 7px 2px;
-}
-
-.navegacao__links:hover {
-    background-color: var(--cor-secundaria);
-    color: var(--cor-primaria);
 }
 
 .estrutura__apresentacao {
@@ -131,6 +84,15 @@ body {
     max-height: 500px;
 }
 
+.swiper-slide h3 {
+    padding-top: 2%;
+    border-top: 3px solid var(--cor-primaria);
+}
+
+.swiper-slide:hover {
+    color: var(--cor-hover);
+}
+
 .swiper-img {
     width: 100%;
     min-height: 325px;
@@ -148,39 +110,6 @@ body {
 
 .swiper-scrollbar {
     display: none;
-}
-
-.rodape {
-    display: flex;
-    align-content: flex-end;
-    flex-direction: column;
-    gap: 5px;
-}
-
-.rodape__texto {
-    font-size: 2rem;
-}
-
-.rodape__contatos {
-    display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-}
-
-.rodape__contatos__links {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 16px;
-    text-decoration: none;
-    font-family: var(--fonte-primaria);
-    border: 1px solid var(--cor-primaria);
-    color: var(--cor-primaria);
-    padding: 10px;
-}
-
-.rodape__contatos__links:hover {
-    background-color: var(--cor-secundaria);
 }
 
 @media (max-width: 1080px) {
