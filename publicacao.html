@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Novo post</title>
+    <link rel="stylesheet" href="./styles/style.css">
+</head>
+<body>
+    <header>
+        <h1>o que vou escrever</h1>
+        <nav class="navegacao">
+            <a class="navegacao__links" href="index.html">INICIO</a>
+        </nav>
+    </header>
+
+    <main>
+        <form>
+            <fieldset>
+              <legend>Nova publicação</legend>
+              <p>
+                <label for="titulo_publicação">
+                    <span>Título:</span>
+                    <input type="text" id="titulo_publicação">
+                </label>
+              </p>
+              <p>
+                <label for="titulo_publicação">
+                    <span>Email do publicador:</span>
+                    <input type="email" id="titulo_publicação">
+                </label>
+              </p>
+              <p>
+                <label for="titulo_publicação">
+                    <span>Artigo:</span>
+                    <textarea id="titulo_publicação"></textarea>
+                </label>
+              </p>
+              <p>
+                <span>Imagens</span>
+                <input type="file" alt="Imagem que quer postar" accept="image/*" multiple>
+              </p>
+            </fieldset>
+            <fieldset>
+                <legend>Área que quer publicar</legend>
+                <ul>
+                    <li>
+                        <label for="videoGames">Video Games</label>
+                        <input type="checkbox" id="videoGames">
+                    </li>
+                    <li>
+                        <label for="jogosTabuleiro">Jogos de Tabuleiro</label>
+                        <input type="checkbox" id="jogosTabuleiro">
+                    </li>
+                    <li>
+                        <label for="economia">Economia</label>
+                        <input type="checkbox" id="economia">
+                    </li>
+                    <li>
+                        <label for="artigos">Artigos</label>
+                        <input type="checkbox" id="artigos">
+                    </li>
+                </ul>
+            </fieldset>
+            <li class="button">
+                <button type="submit">Envie sua publicação</button>
+              </li>
+          </form>
+    </main>
+
+    <script src="main.js"></script>
+</body>
+</html>
