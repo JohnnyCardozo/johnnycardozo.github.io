@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Rajdhani&display=swap');
 
+@import 'editorTexto.css';
+
 .formulario {
     display: flex;
     flex-direction: column;
