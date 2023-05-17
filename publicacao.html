@@ -5,8 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Novo post</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="./styles/style.css">
     <link rel="stylesheet" href="./styles/formulario.css">
+    
 </head>
 <body>
     <header>
@@ -35,7 +37,93 @@
               <p>
                 <label class="divisao__campo" for="titulo_publicação">
                     <span class="informacao__span">Artigo:</span>
-                    <textarea class="campo__input" id="titulo_publicação" rows="15"></textarea>
+                    <div class="container">
+                        <div class="options">
+                            <button type="button" id="bold" class="option__button format">
+                                <i class="fa-solid fa-bold"></i>
+                            </button>
+                            <button type="button" id="italic" class="option__button format">
+                                <i class="fa-solid fa-italic"></i>
+                            </button>
+                            <button type="button" id="underline" class="option__button format">
+                                <i class="fa-solid fa-underline"></i>
+                            </button>
+                            <button type="button" id="strikethrough" class="option__button format">
+                                <i class="fa-solid fa-strikethrough"></i>
+                            </button>
+                            <button type="button" id="superscript" class="option__button script">
+                                <i class="fa-solid fa-superscript"></i>
+                            </button>
+                            <button type="button" id="subscript" class="option__button script">
+                                <i class="fa-solid fa-subscript"></i>
+                            </button>
+                            <button type="button" id="insertOrderedList" class="option__button">
+                                <i class="fa-solid fa-list-ol"></i>
+                            </button>
+
+                            <button type="button" id="insertUnorderedList" class="option__button">
+                                <i class="fa-solid fa-list"></i>
+                            </button>
+                            <button type="button" id="insertUnorderedList" class="option__button">
+                                <i class="fa-solid fa-list"></i>
+                            </button>
+
+                            <button type="button" id="undo" class="option__button">
+                                <i class="fa-solid fa-rotate-left"></i>
+                            </button>
+                            <button type="button" id="redo" class="option__button">
+                                <i class="fa-solid fa-rotate-right"></i>
+                            </button>
+
+                            <button type="button" id="createLink" class="option__button">
+                                <i class="fa-solid fa-link"></i>
+                            </button>
+                            <button type="button" id="unlink" class="option__button">
+                                <i class="fa-solid fa-unlink"></i>
+                            </button>
+
+                            <button type="button" id="justifyLeft" class="option__button align">
+                                <i class="fa-solid fa-align-left"></i>
+                            </button>
+                            <button type="button" id="justifyCenter" class="option__button align">
+                                <i class="fa-solid fa-align-center"></i>
+                            </button>
+                            <button type="button" id="justifyLeft" class="option__button align">
+                                <i class="fa-solid fa-align-left"></i>
+                            </button>
+                            <button type="button" id="justifyFull" class="option__button align">
+                                <i class="fa-solid fa-align-justify"></i>
+                            </button>
+                            <button id="indent" class="option__button spacing">
+                                <i class="fa-solid fa-indent"></i>
+                            </button>
+                            <button type="button" id="outdent" class="option__button spacing">
+                                <i class="fa-solid fa-outdent"></i>
+                            </button>
+
+                            <select id="formatBlock" class="adv__option__button">
+                                <option value="H1">H1</option>
+                                <option value="H2">H2</option>
+                                <option value="H3">H3</option>
+                                <option value="H4">H4</option>
+                                <option value="H5">H5</option>
+                                <option value="H6">H6</option>
+                            </select>
+
+                            <select id="fontName" class="adv__option__button"></select>
+                            <select id="fontSize" class="adv__option__button"></select>
+
+                            <div class="input-wrapper">
+                                <input type="color" id="foreColor" class="adv__option__button">
+                                <label for="foreColor">Font Color (padrão 173, 255, 47)</label>
+                            </div>
+                            <div class="input-wrapper">
+                                <input type="color" id="backColor" class="adv__option__button">
+                                <label for="backColor">Back Color</label>
+                            </div>
+                            <div id="textInput" contenteditable="true"></div>
+                        </div>
+                    </div>
                 </label>
               </p>
               <p class="divisao__campo">
@@ -199,6 +287,6 @@
         </form>
     </main>
 
-    <script src="main.js"></script>
+    <script src="editorTexto.js"></script>
 </body>
 </html>
