@@ -98,3 +98,10 @@
     background-color: var(--cor-secundaria);
     color: var(--cor-primaria);
 }
+
+@media (max-width: 1080px) {
+    .cabecalho__logo__botao {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
