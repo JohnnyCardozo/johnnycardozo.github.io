@@ -8,6 +8,7 @@
 .cabecalho__logo__botao {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
     align-items: center;
 }
 
@@ -23,9 +24,22 @@
 }
 
 .logo__titulo {
-    display: inline-block;
+    display: flex;
     font-size: 4rem;
     font-family: var(--fonte-primaria);
+}
+
+.piscando {
+    animation: blink 1s infinite normal;
+}
+
+@keyframes blink{
+    from {
+        opacity: 100;
+    }
+    to{
+        opacity: 0;
+    }
 }
 
 .botao__novopost {
