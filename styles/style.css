@@ -22,11 +22,27 @@
 }
 
 body {
-    margin: 0 2%;
+    margin: 0 1%;
     box-sizing: border-box;
     background-color: var(--cor-de-fundo);
     color: var(--cor-do-texto);
     font-family: var(--fonte-secundaria);
+}
+
+body::-webkit-scrollbar {
+    width: 8px;
+}
+  
+body::-webkit-scrollbar-track {
+    background: var(--cor-de-fundo);
+}
+  
+body::-webkit-scrollbar-thumb {
+    background-color: var(--cor-primaria);
+}
+
+body::-webkit-scrollbar-thumb:hover {
+    background-color: var(--cor-secundaria);    
 }
 
 .estrutura {
