@@ -23,22 +23,22 @@
             <fieldset class="formulario__divisao">
               <legend class="divisao__legenda">Nova publicação</legend>
               <p>
-                <label class="divisao__campo" for="titulo_publicação">
+                <label class="divisao__campo" for="titulo_publicacao">
                     <span class="informacao__span">Título:</span>
-                    <input class="campo__input" type="text" id="titulo_publicação">
+                    <input class="campo__input" type="text" id="titulo_publicacao">
                 </label>
               </p>
               <p>
-                <label class="divisao__campo" for="titulo_publicação">
+                <label class="divisao__campo" for="email_publicacao">
                     <span class="informacao__span">Email do publicador:</span>
-                    <input class="campo__input" type="email" id="titulo_publicação">
+                    <input class="campo__input" type="email" id="email_publicacao">
                 </label>
               </p>
               <p>
-                <label class="divisao__campo" for="titulo_publicação">
+                <label class="divisao__campo" for="artigo_publicacao">
                     <span class="informacao__span">Artigo:</span>
                     <div class="container">
-                        <div class="options">
+                        <div class="options__editorTexto">
                             <button type="button" id="bold" class="option__button format">
                                 <i class="fa-solid fa-bold"></i>
                             </button>
@@ -118,17 +118,17 @@
                                 <input type="color" id="backColor" class="adv__option__button">
                                 <label for="backColor">Back Color</label>
                             </div>
-                            <div id="textInput" contenteditable="true"></div>
+                            <div id="artigo_publicação" contenteditable="true"></div>
                         </div>
                     </div>
                 </label>
               </p>
               <p class="divisao__campo">
                 <span class="informacao__span">Imagens:</span>
-                <input class="campo__input" type="file" alt="Imagem que quer postar" accept="image/*" multiple>
+                <input class="campo__file" type="file" alt="Imagem que quer postar" accept="image/*" multiple>
               </p>
               <p class="divisao__campo">
-                <input class="campo__input" type="hidden" value="">
+                <input class="campo__hidden" type="hidden" value="">
               </p>
             </fieldset>
 
@@ -222,60 +222,60 @@
                     <div class="divisao__ficha__genero">
                         <p>
                             <input type="checkbox" id="hackNslash">
-                            <label class="divisao__campo__checkbox" for="windows">Hack n' Slash</label>
+                            <label class="divisao__campo__checkbox" for="hackNslash">Hack n' Slash</label>
                             
                         </p>
                         <p>
                             <input type="checkbox" id="plataforma">
-                            <label class="divisao__campo__checkbox" for="windows">Plataforma</label>
+                            <label class="divisao__campo__checkbox" for="plataforma">Plataforma</label>
                         </p>
                         <p>
                             <input type="checkbox" id="arcade">
-                            <label class="divisao__campo__checkbox" for="windows">Arcade</label>
+                            <label class="divisao__campo__checkbox" for="arcade">Arcade</label>
                         </p>
                         <p>
                             <input type="checkbox" id="corrida">
-                            <label class="divisao__campo__checkbox" for="windows">Corrida</label>
+                            <label class="divisao__campo__checkbox" for="corrida">Corrida</label>
                         </p>
                         <p>
                             <input type="checkbox" id="estrategia">
-                            <label class="divisao__campo__checkbox" for="windows">Estratégia</label>
+                            <label class="divisao__campo__checkbox" for="estrategia">Estratégia</label>
                         </p>
                         <p>
                             <input type="checkbox" id="tiro">
-                            <label class="divisao__campo__checkbox" for="windows">Tiro</label>
+                            <label class="divisao__campo__checkbox" for="tiro">Tiro</label>
                         </p>
                         <p>
                             <input type="checkbox" id="rpg">
-                            <label class="divisao__campo__checkbox" for="windows">RPG</label>
+                            <label class="divisao__campo__checkbox" for="rpg">RPG</label>
                         </p>
                         <p>
                             <input type="checkbox" id="tabuleiro">
-                            <label class="divisao__campo__checkbox" for="windows">Tabuleiro</label>
+                            <label class="divisao__campo__checkbox" for="tabuleiro">Tabuleiro</label>
                         </p>
                         <p>
                             <input type="checkbox" id="mundoAberto">
-                            <label class="divisao__campo__checkbox" for="windows">Mundo aberto</label>
+                            <label class="divisao__campo__checkbox" for="mundoAberto">Mundo aberto</label>
                         </p>
                         <p>
                             <input type="checkbox" id="stealth">
-                            <label class="divisao__campo__checkbox" for="windows">Stealth</label>
+                            <label class="divisao__campo__checkbox" for="stealth">Stealth</label>
                         </p>
                         <p>
                             <input type="checkbox" id="luta">
-                            <label class="divisao__campo__checkbox" for="windows">Luta</label>
+                            <label class="divisao__campo__checkbox" for="luta">Luta</label>
                         </p>
                         <p>
                             <input type="checkbox" id="quebraCabeça">
-                            <label class="divisao__campo__checkbox" for="windows">Quebra-Cabeça</label>
+                            <label class="divisao__campo__checkbox" for="quebraCabeça">Quebra-Cabeça</label>
                         </p>
                         <p>
                             <input type="checkbox" id="rogueLike">
-                            <label class="divisao__campo__checkbox" for="windows">Roguelike</label>
+                            <label class="divisao__campo__checkbox" for="rogueLike">Roguelike</label>
                         </p>
                         <p>
                             <input type="checkbox" id="simulacao">
-                            <label class="divisao__campo__checkbox" for="windows">Simulação</label>
+                            <label class="divisao__campo__checkbox" for="simulacao">Simulação</label>
                         </p>
                     </div>
                 </div>
@@ -285,6 +285,7 @@
         </form>
     </main>
 
+    <script src="publicacao.js"></script>
     <script src="editorTexto.js"></script>
 </body>
 </html>

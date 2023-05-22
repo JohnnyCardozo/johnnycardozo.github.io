@@ -7,7 +7,7 @@
     background-size: cover;
 }
 
-.options {
+.options__editorTexto {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -61,7 +61,7 @@ input[type="color"]::-moz-color-swatch {
     box-shadow: 0 0 0 2px var(--cor-de-fundo), 0 0 0 3px var(--cor-primaria);
 }
 
-#textInput {
+#artigo_publicação {
     border: 1px solid var(--cor-primaria);
     font-family: 'Rajdhani', sans-serif;
     padding: 0.5rem;
