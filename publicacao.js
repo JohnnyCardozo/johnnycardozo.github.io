@@ -1,21 +1,14 @@
-function pegaID(contador) {
-    let idElemento = informacoesArtigo[contador];
-    console.log(idElemento.id);
+const elementoComInput = document.querySelectorAll(".campo__input");
+
+function pegaID(indexElementoDoConjunto) {
+    let elemento = elementoComInput[indexElementoDoConjunto];
+    console.log(elemento.id);
 }
 
-const informacoesArtigo = document.querySelectorAll(".campo__input");
-
-
-let contador = 0;
-
-while(contador < informacoesArtigo.length){
-    const campos = informacoesArtigo[contador];
-
-    let contadorFuncao = contador
+for (let contador = 0; contador < elementoComInput.length; contador++) {
+    const campos = elementoComInput[contador];
 
     campos.onclick = function () {
-        pegaID(contadorFuncao);
+        pegaID(contador);
     }
-
-    contador += 1;
 }
