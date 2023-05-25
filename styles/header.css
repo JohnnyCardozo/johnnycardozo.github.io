@@ -61,7 +61,7 @@
     }
 }
 
-.botao__novopost {
+.botao__editor {
     background-color: var(--cor-de-fundo);
     color: var(--cor-do-texto);
     border: 2px solid var(--cor-primaria);
@@ -71,7 +71,7 @@
     white-space: nowrap;
 }
 
-.botao__novopost:hover {
+.botao__editor:hover {
     background-color: var(--cor-secundaria);
     color: var(--cor-primaria);
 }
