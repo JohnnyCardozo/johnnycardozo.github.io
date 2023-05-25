@@ -19,19 +19,19 @@
     </header>
 
     <main>
-        <form class="formulario">
+        <form class="formulario" id="novoArtigo">
             <fieldset class="formulario__divisao">
               <legend class="divisao__legenda">Nova publicação</legend>
               <p>
-                <label class="divisao__campo" for="titulo_publicacao">
+                <label class="divisao__campo" for="tituloPublicacao">
                     <span class="informacao__span">Título:</span>
-                    <input class="campo__input" type="text" id="titulo_publicacao" placeholder="Nome do artigo">
+                    <input class="campo__input" type="text" id="tituloPublicacao" placeholder="Nome do artigo">
                 </label>
               </p>
               <p>
-                <label class="divisao__campo" for="email_publicacao">
+                <label class="divisao__campo" for="emailPublicacao">
                     <span class="informacao__span">Email do publicador:</span>
-                    <input class="campo__input" type="email" id="email_publicacao" placeholder="Email de quem escreveu">
+                    <input class="campo__input" type="email" id="emailPublicacao" placeholder="Email de quem escreveu">
                 </label>
               </p>
               <p>
@@ -282,10 +282,11 @@
             </fieldset>
 
             <button class="botao__enviar" type="submit">Envie sua publicação</button>
+            <a class="botao__enviar" href="./artigoEscrito.html">ARTIGOS</a>
         </form>
     </main>
 
-    <script src="publicacao.js"></script>
     <script src="editorTexto.js"></script>
+    <script src="artigo.js"></script>
 </body>
 </html>
