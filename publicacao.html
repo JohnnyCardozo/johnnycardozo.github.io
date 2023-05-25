@@ -19,26 +19,26 @@
     </header>
 
     <main>
-        <form class="formulario" id="novoArtigo">
-            <fieldset class="formulario__divisao">
+        <form class="formulario__artigo" id="novoArtigo">
+            <fieldset class="formulario__divisao__artigo">
               <legend class="divisao__legenda">Nova publicação</legend>
               <p>
-                <label class="divisao__campo" for="tituloPublicacao">
-                    <span class="informacao__span">Título:</span>
-                    <input class="campo__input" type="text" id="tituloPublicacao" placeholder="Nome do artigo">
+                <label class="divisao__campo__texto" for="publicacaoTitulo">
+                    <span class="legenda__campo__span">Título:</span>
+                    <input class="campo__input__texto" type="text" id="publicacaoTitulo" placeholder="Nome do artigo">
                 </label>
               </p>
               <p>
-                <label class="divisao__campo" for="emailPublicacao">
-                    <span class="informacao__span">Email do publicador:</span>
-                    <input class="campo__input" type="email" id="emailPublicacao" placeholder="Email de quem escreveu">
+                <label class="divisao__campo__texto" for="publicacaoEmail">
+                    <span class="legenda__campo__span">Email do publicador:</span>
+                    <input class="campo__input__texto" type="email" id="publicacaoEmail" placeholder="Email de quem escreveu">
                 </label>
               </p>
               <p>
-                <label class="divisao__campo" for="artigo_publicacao">
-                    <span class="informacao__span">Artigo:</span>
+                <label class="divisao__campo__texto" for="publicacaoArtigo">
+                    <span class="legenda__campo__span">Artigo:</span>
                     <div class="container">
-                        <div class="options__editorTexto">
+                        <div class="options__editor__texto">
                             <button type="button" id="bold" class="option__button format">
                                 <i class="fa-solid fa-bold"></i>
                             </button>
@@ -112,22 +112,22 @@
 
                             <div class="input-wrapper">
                                 <input type="color" id="foreColor" class="adv__option__button">
-                                <label for="foreColor">Font Color (padrão 173, 255, 47)</label>
+                                <label for="foreColor">Cor da Fonte (padrão 173, 255, 47)</label>
                             </div>
                             <div class="input-wrapper">
                                 <input type="color" id="backColor" class="adv__option__button">
-                                <label for="backColor">Back Color</label>
+                                <label for="backColor">Cor de Fundo</label>
                             </div>
-                            <div id="artigo_publicação" contenteditable="true"></div>
+                            <div id="publicacaoArtigo" contenteditable="true"></div>
                         </div>
                     </div>
                 </label>
               </p>
-              <p class="divisao__campo">
-                <span class="informacao__span">Imagens:</span>
-                <input class="campo__file" type="file" alt="Imagem que quer postar" accept="image/*" multiple>
+              <p class="divisao__campo__imagem" id="publicacaoImagem">
+                <span class="legenda__campo__span">Imagens:</span>
+                <input class="campo__file__imagem" type="file" alt="Imagem que quer postar" accept="image/*" multiple>
               </p>
-              <p class="divisao__campo">
+              <p class="divisao__campo__hidden" id="publicacaoData">
                 <input class="campo__hidden" type="hidden" value="">
               </p>
             </fieldset>
@@ -135,147 +135,147 @@
             <fieldset class="formulario__divisao__area">
                 <legend class="divisao__legenda">Área que quer publicar</legend>
                 <p>
-                    <input type="checkbox" id="videoGames">
-                    <label class="divisao__campo__checkbox" for="videoGames">Video Games</label>
+                    <input type="checkbox" id="areaVideoGames">
+                    <label class="divisao__campo__checkbox" for="areaVideoGames">Video Games</label>
                 </p>
                 <p>
-                    <input type="checkbox" id="jogosTabuleiro">
-                    <label class="divisao__campo__checkbox" for="jogosTabuleiro">Jogos de Tabuleiro</label>
+                    <input type="checkbox" id="areaJogosTabuleiro">
+                    <label class="divisao__campo__checkbox" for="areaJogosTabuleiro">Jogos de Tabuleiro</label>
                 </p>
                 <p>
-                    <input type="checkbox" id="economia">
-                    <label class="divisao__campo__checkbox" for="economia">Economia</label>
+                    <input type="checkbox" id="areaEconomia">
+                    <label class="divisao__campo__checkbox" for="areaEconomia">Economia</label>
                 </p>
                 <p>
-                    <input type="checkbox" id="artigos">
-                    <label class="divisao__campo__checkbox" for="artigos">Artigos</label>
+                    <input type="checkbox" id="areaArtigos">
+                    <label class="divisao__campo__checkbox" for="areaArtigos">Artigos</label>
                 </p>
             </fieldset>
 
-            <fieldset class="formulario__divisao__ficha_tecnica">
+            <fieldset class="formulario__divisao__ficha__tecnica">
                 <legend class="divisao__legenda">Ficha Técnica do jogo</legend>
                 <div>
                     <p>
-                        <label class="divisao__campo__ficha" for="ficha_nome_jogo">
-                            <span class="informacao__span">Nome do jogo:</span>
-                            <input class="campo__input" type="text" id="ficha_nome_jogo" placeholder="Nome do jogo em destaque">
+                        <label class="divisao__campo__texto" for="fichaNomeJogo">
+                            <span class="legenda__campo__span">Nome do jogo:</span>
+                            <input class="campo__input__texto" type="text" id="fichaNomeJogo" placeholder="Nome do jogo em destaque">
                         </label>
                     </p>
                     <p>
-                        <label class="divisao__campo__ficha" for="ficha_desenvolvedora">
-                            <span class="informacao__span">Desenvolvedora do jogo:</span>
-                            <input class="campo__input" type="text" id="ficha_desenvolvedora" placeholder="Quem desenvolveu">
+                        <label class="divisao__campo__texto" for="fichaDesenvolvedora">
+                            <span class="legenda__campo__span">Desenvolvedora do jogo:</span>
+                            <input class="campo__input__texto" type="text" id="fichaDesenvolvedora" placeholder="Quem desenvolveu">
                         </label>
                     </p>
                     <p>
-                        <label class="divisao__campo__ficha" for="ficha_publicadora">
-                            <span class="informacao__span">Publicadora do jogo:</span>
-                            <input class="campo__input" type="text" id="ficha_publicadora" placeholder="Quem publicou">
+                        <label class="divisao__campo__texto" for="fichaPublicadora">
+                            <span class="legenda__campo__span">Publicadora do jogo:</span>
+                            <input class="campo__input__texto" type="text" id="fichaPublicadora" placeholder="Quem publicou">
                         </label>
                     </p>
                     <p>
-                        <label class="divisao__campo__ficha" for="ficha_data_lancamento">
-                            <span class="informacao__span">Data de publicação:</span>
-                            <input class="campo__input" type="date" id="ficha_data_lancamento">
+                        <label class="divisao__campo__ficha" for="fichaDataLancamento">
+                            <span class="legenda__campo__span">Data de publicação:</span>
+                            <input class="campo__input__data" type="date" id="fichaDataLancamento">
                         </label>
                     </p>
                     <p>
-                        <label class="divisao__campo__ficha" for="ficha_numero_jogadores">
-                            <span class="informacao__span">Número de jogadores:</span>
-                            <input class="campo__input" type="number" id="ficha_numero_jogadores">
+                        <label class="divisao__campo__ficha" for="fichaNumeroJogadores">
+                            <span class="legenda__campo__span">Número de jogadores:</span>
+                            <input class="campo__input__numero" type="number" id="fichaNumeroJogadores">
                         </label>
                     </p>
                 </div>
-                <div class="divisao__ficha">
-                    <span class="informacao__span">Plataformas:</span>
+                <div class="divisao__plataforma">
+                    <span class="legenda__campo__span">Plataformas:</span>
                     <p>
-                        <input type="checkbox" id="windows">
-                        <label class="divisao__campo__checkbox" for="windows">Windows</label>
+                        <input type="checkbox" id="plataformaWindows">
+                        <label class="divisao__campo__checkbox" for="plataformaWindows">Windows</label>
                     </p>
                     <p>
-                        <input type="checkbox" id="mac">
-                        <label class="divisao__campo__checkbox" for="mac">Mac</label>
+                        <input type="checkbox" id="plataformaMac">
+                        <label class="divisao__campo__checkbox" for="plataformaMac">Mac</label>
                     </p>
                     <p>
-                        <input type="checkbox" id="linux">
-                        <label class="divisao__campo__checkbox" for="linux">Linux</label>
+                        <input type="checkbox" id="plataformaLinux">
+                        <label class="divisao__campo__checkbox" for="plataformaLinux">Linux</label>
                     </p>
                     <p>
-                        <input type="checkbox" id="playstation">
-                        <label class="divisao__campo__checkbox" for="playstation">Playstation</label>
+                        <input type="checkbox" id="plataformaPlaystation">
+                        <label class="divisao__campo__checkbox" for="plataformaPlaystation">Playstation</label>
                     </p>
                     <p>
-                        <input type="checkbox" id="xbox">
-                        <label class="divisao__campo__checkbox" for="xbox">Xbox</label>
+                        <input type="checkbox" id="plataformaXbox">
+                        <label class="divisao__campo__checkbox" for="plataformaXbox">Xbox</label>
                     </p>
                     <p>
-                        <input type="checkbox" id="nintendo">
-                        <label class="divisao__campo__checkbox" for="nintendo">Nintendo</label>
+                        <input type="checkbox" id="plataformaNintendo">
+                        <label class="divisao__campo__checkbox" for="plataformaNintendo">Nintendo</label>
                     </p>
                     <p>
-                        <input type="checkbox" id="tabuleiro">
-                        <label class="divisao__campo__checkbox" for="tabuleiro">Jogo de tabuleiro</label>
+                        <input type="checkbox" id="plataformaTabuleiro">
+                        <label class="divisao__campo__checkbox" for="plataformaTabuleiro">Jogo de tabuleiro</label>
                     </p>
                 </div>
-                <div class="divisao__ficha__genero">
-                    <span class="informacao__span">Gêneros:</span>
-                    <div class="divisao__ficha__genero">
+                <div class="divisao__genero">
+                    <span class="legenda__campo__span">Gêneros:</span>
+                    <div class="divisao__genero">
                         <p>
-                            <input type="checkbox" id="hackNslash">
-                            <label class="divisao__campo__checkbox" for="hackNslash">Hack n' Slash</label>
+                            <input type="checkbox" id="generoHackNslash">
+                            <label class="divisao__campo__checkbox" for="generoHackNslash">Hack n' Slash</label>
                             
                         </p>
                         <p>
-                            <input type="checkbox" id="plataforma">
-                            <label class="divisao__campo__checkbox" for="plataforma">Plataforma</label>
+                            <input type="checkbox" id="generoPlataforma">
+                            <label class="divisao__campo__checkbox" for="generoPlataforma">Plataforma</label>
                         </p>
                         <p>
-                            <input type="checkbox" id="arcade">
-                            <label class="divisao__campo__checkbox" for="arcade">Arcade</label>
+                            <input type="checkbox" id="generoArcade">
+                            <label class="divisao__campo__checkbox" for="generoArcade">Arcade</label>
                         </p>
                         <p>
-                            <input type="checkbox" id="corrida">
-                            <label class="divisao__campo__checkbox" for="corrida">Corrida</label>
+                            <input type="checkbox" id="generoCorrida">
+                            <label class="divisao__campo__checkbox" for="generoCorrida">Corrida</label>
                         </p>
                         <p>
-                            <input type="checkbox" id="estrategia">
-                            <label class="divisao__campo__checkbox" for="estrategia">Estratégia</label>
+                            <input type="checkbox" id="generoEstrategia">
+                            <label class="divisao__campo__checkbox" for="generoEstrategia">Estratégia</label>
                         </p>
                         <p>
-                            <input type="checkbox" id="tiro">
-                            <label class="divisao__campo__checkbox" for="tiro">Tiro</label>
+                            <input type="checkbox" id="generoTiro">
+                            <label class="divisao__campo__checkbox" for="generoTiro">Tiro</label>
                         </p>
                         <p>
-                            <input type="checkbox" id="rpg">
-                            <label class="divisao__campo__checkbox" for="rpg">RPG</label>
+                            <input type="checkbox" id="generoRPG">
+                            <label class="divisao__campo__checkbox" for="generoRPG">RPG</label>
                         </p>
                         <p>
-                            <input type="checkbox" id="tabuleiro">
-                            <label class="divisao__campo__checkbox" for="tabuleiro">Tabuleiro</label>
+                            <input type="checkbox" id="generoTabuleiro">
+                            <label class="divisao__campo__checkbox" for="generoTabuleiro">Tabuleiro</label>
                         </p>
                         <p>
-                            <input type="checkbox" id="mundoAberto">
-                            <label class="divisao__campo__checkbox" for="mundoAberto">Mundo aberto</label>
+                            <input type="checkbox" id="generoMundoAberto">
+                            <label class="divisao__campo__checkbox" for="generoMundoAberto">Mundo aberto</label>
                         </p>
                         <p>
-                            <input type="checkbox" id="stealth">
-                            <label class="divisao__campo__checkbox" for="stealth">Stealth</label>
+                            <input type="checkbox" id="generoStealth">
+                            <label class="divisao__campo__checkbox" for="generoStealth">Stealth</label>
                         </p>
                         <p>
-                            <input type="checkbox" id="luta">
-                            <label class="divisao__campo__checkbox" for="luta">Luta</label>
+                            <input type="checkbox" id="generoLuta">
+                            <label class="divisao__campo__checkbox" for="generoLuta">Luta</label>
                         </p>
                         <p>
-                            <input type="checkbox" id="quebraCabeça">
-                            <label class="divisao__campo__checkbox" for="quebraCabeça">Quebra-Cabeça</label>
+                            <input type="checkbox" id="generoQuebraCabeça">
+                            <label class="divisao__campo__checkbox" for="generoQuebraCabeça">Quebra-Cabeça</label>
                         </p>
                         <p>
-                            <input type="checkbox" id="rogueLike">
-                            <label class="divisao__campo__checkbox" for="rogueLike">Roguelike</label>
+                            <input type="checkbox" id="generoRogueLike">
+                            <label class="divisao__campo__checkbox" for="generoRogueLike">Roguelike</label>
                         </p>
                         <p>
-                            <input type="checkbox" id="simulacao">
-                            <label class="divisao__campo__checkbox" for="simulacao">Simulação</label>
+                            <input type="checkbox" id="generoSimulacao">
+                            <label class="divisao__campo__checkbox" for="generoSimulacao">Simulação</label>
                         </p>
                     </div>
                 </div>
