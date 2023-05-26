@@ -119,3 +119,26 @@ input[type="checkbox"]:checked::before {
     background-color: var(--cor-secundaria);
     color: var(--cor-primaria);
 }
+
+/* Lista de jogos cadastrados */
+
+.lista__jogos{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    border-top: 2px solid var(--cor-primaria);
+    padding: 1.5rem;
+    list-style-type: none;
+}
+
+.item__jogo {
+    border: 2px solid var(--cor-primaria);
+    padding: 1rem;
+}
+
+.informação__jogo {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    color: var(--cor-primaria);
+}
