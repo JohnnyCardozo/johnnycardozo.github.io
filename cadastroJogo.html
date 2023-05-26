@@ -7,50 +7,50 @@
     <title>Novo post</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="./styles/style.css">
-    <link rel="stylesheet" href="./styles/formulario.css">
+    <link rel="stylesheet" href="./styles/formularioCadastroJogo.css">
     
 </head>
 <body>
     <header>
-        <h1>o que vou escrever</h1>
+        <h1>Jogos que vou cadastrar</h1>
         <nav class="navegacao">
             <a class="navegacao__links" href="index.html">INICIO</a>
         </nav>
     </header>
 
     <main>
-        <form class="formulario__artigo" id="novoArtigo">
-            <fieldset class="formulario__divisao__ficha__tecnica">
-                <legend class="divisao__legenda">Ficha Técnica do jogo</legend>
+        <form class="formulario__cadastro__jogo" id="novoJogo">
+            <fieldset class="formulario__divisao__cadastro__jogo">
+                <legend class="divisao__legenda">Cadastro de jogo</legend>
                 <div>
                     <p>
-                        <label class="divisao__campo__texto" for="fichaNomeJogo">
+                        <label class="divisao__campo__texto" for="cadastroNomeJogo">
                             <span class="legenda__campo__span">Nome do jogo:</span>
-                            <input class="campo__input__texto" type="text" id="fichaNomeJogo" placeholder="Nome do jogo em destaque">
+                            <input class="campo__input__texto" type="text" id="cadastroNomeJogo" placeholder="Nome do jogo em destaque">
                         </label>
                     </p>
                     <p>
-                        <label class="divisao__campo__texto" for="fichaDesenvolvedora">
+                        <label class="divisao__campo__texto" for="cadastroDesenvolvedora">
                             <span class="legenda__campo__span">Desenvolvedora do jogo:</span>
-                            <input class="campo__input__texto" type="text" id="fichaDesenvolvedora" placeholder="Quem desenvolveu">
+                            <input class="campo__input__texto" type="text" id="cadastroDesenvolvedora" placeholder="Quem desenvolveu">
                         </label>
                     </p>
                     <p>
-                        <label class="divisao__campo__texto" for="fichaPublicadora">
+                        <label class="divisao__campo__texto" for="cadastroPublicadora">
                             <span class="legenda__campo__span">Publicadora do jogo:</span>
-                            <input class="campo__input__texto" type="text" id="fichaPublicadora" placeholder="Quem publicou">
+                            <input class="campo__input__texto" type="text" id="cadastroPublicadora" placeholder="Quem publicou">
                         </label>
                     </p>
                     <p>
-                        <label class="divisao__campo__ficha" for="fichaDataLancamento">
+                        <label class="divisao__campo__data" for="cadastroDataLancamento">
                             <span class="legenda__campo__span">Data de publicação:</span>
-                            <input class="campo__input__data" type="date" id="fichaDataLancamento">
+                            <input class="campo__input__data" type="date" id="cadastroDataLancamento">
                         </label>
                     </p>
                     <p>
-                        <label class="divisao__campo__ficha" for="fichaNumeroJogadores">
+                        <label class="divisao__campo__numero" for="cadastroNumeroJogadores">
                             <span class="legenda__campo__span">Número de jogadores:</span>
-                            <input class="campo__input__numero" type="number" id="fichaNumeroJogadores">
+                            <input class="campo__input__numero" type="number" id="cadastroNumeroJogadores">
                         </label>
                     </p>
                 </div>
@@ -148,7 +148,10 @@
                     </div>
                 </div>
             </fieldset>
+
+            <button class="botao__cadastrar" type="submit">Cadastrar Jogo</button>
         </form>
     </main>
+    <script src="./Js/cadastroJogo.js"></script>
 </body>
 </html>
