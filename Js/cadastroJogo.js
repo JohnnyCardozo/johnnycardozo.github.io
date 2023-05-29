@@ -14,6 +14,8 @@ formularioCadastroJogo.addEventListener("submit", (evento) => {
     const dataLancamentoCadastroJogo = evento.target.elements['cadastroDataLancamento'];
     const numeroJogadoresCadastro = evento.target.elements['cadastroNumeroJogadores'];
 
+    const jogoExiste = jogos.find(elemento => elemento.nome === tituloCadastroJogo.value);
+
     const jogoAtual = {
         "nome": tituloCadastroJogo.value,
         "desenvolvedora": desenvolvedoraCadastroJogo.value,
@@ -22,9 +24,19 @@ formularioCadastroJogo.addEventListener("submit", (evento) => {
         "numeroJogadores": numeroJogadoresCadastro.value
     }
 
-    cadastrarJogo(jogoAtual);
+    if (jogoExiste) {
+        jogoAtual.id = jogoExiste.id
 
-    jogos.push(jogoAtual);
+        atualizaJogo(jogoAtual);
+
+        jogos[jogoExiste.id] = jogoAtual;
+    }
+    else{
+        jogoAtual.id = jogos.length
+
+        cadastrarJogo(jogoAtual);
+        jogos.push(jogoAtual);
+    }
 
     localStorage.setItem("Jogos", JSON.stringify(jogos));
 
@@ -40,6 +52,8 @@ function cadastrarJogo(jogo) {
 
     const itemJogo = document.createElement('li');
     itemJogo.classList.add("item__jogo");
+
+    itemJogo.dataset.id = jogo.id
 
     const novoInformacaoJogo = document.createElement('div');
     novoInformacaoJogo.classList.add("informação__jogo");
@@ -72,3 +86,10 @@ function cadastrarJogo(jogo) {
 
     listaJogos.appendChild(itemJogo)
 };
+
+function atualizaJogo(jogo) {
+    document.querySelector(".desenvolvedora__jogo").innerHTML = 'Desenvolvedora:  ' + jogo.desenvolvedora;
+    document.querySelector(".publicadora__jogo").innerHTML = 'Publicadora:  ' + jogo.publicadora;
+    document.querySelector(".data__jogo").innerHTML = 'Data de Lançamento:  ' + jogo.dataLançamento;
+    document.querySelector(".numero__jogadores__jogo").innerHTML = 'Número de Jogadores:  ' + jogo.numeroJogadores;
+}
