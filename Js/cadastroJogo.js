@@ -29,10 +29,10 @@ formularioCadastroJogo.addEventListener("submit", (evento) => {
 
         atualizaJogo(jogoAtual);
 
-        jogos[jogoExiste.id] = jogoAtual;
+        jogos[jogos.findIndex(elemento => elemento.id === jogoExiste.id)] = jogoAtual;
     }
     else{
-        jogoAtual.id = jogos.length
+        jogoAtual.id = jogos[jogos.length - 1] ? (jogos[jogos.length - 1]).id + 1 : 0;
 
         cadastrarJogo(jogoAtual);
         jogos.push(jogoAtual);
@@ -52,7 +52,6 @@ function cadastrarJogo(jogo) {
 
     const itemJogo = document.createElement('li');
     itemJogo.classList.add("item__jogo");
-
     itemJogo.dataset.id = jogo.id
 
     const novoInformacaoJogo = document.createElement('div');
@@ -84,6 +83,8 @@ function cadastrarJogo(jogo) {
     numeroJogadoresJogo.innerHTML = 'Número de Jogadores:  ' + jogo.numeroJogadores;
     novoInformacaoJogo.appendChild(numeroJogadoresJogo);
 
+    itemJogo.appendChild(botaoDeleta(jogo.id))
+
     listaJogos.appendChild(itemJogo)
 };
 
@@ -92,4 +93,24 @@ function atualizaJogo(jogo) {
     document.querySelector(".publicadora__jogo").innerHTML = 'Publicadora:  ' + jogo.publicadora;
     document.querySelector(".data__jogo").innerHTML = 'Data de Lançamento:  ' + jogo.dataLançamento;
     document.querySelector(".numero__jogadores__jogo").innerHTML = 'Número de Jogadores:  ' + jogo.numeroJogadores;
+}
+
+function botaoDeleta(id) {
+    const elementoBotaoDeletar = document.createElement("button");
+    elementoBotaoDeletar.classList.add("deleta__jogo");
+    elementoBotaoDeletar.innerHTML = 'Deletar jogo';
+
+    elementoBotaoDeletar.addEventListener("click", function() {
+        deletaJogo(this.parentNode, id)
+    })
+
+    return elementoBotaoDeletar;
+}
+
+function deletaJogo(tag, id) {
+    tag.remove();
+
+    jogos.splice(jogos.findIndex(elemento => elemento.id === id), 1)
+
+    localStorage.setItem("Jogos", JSON.stringify(jogos));
 }
