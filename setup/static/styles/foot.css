@@ -1,0 +1,33 @@
+.rodape {
+    display: flex;
+    align-content: flex-end;
+    flex-direction: column;
+    gap: 5px;
+    margin-bottom: 2rem;
+}
+
+.rodape__texto {
+    font-size: 2rem;
+}
+
+.rodape__contatos {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.rodape__contatos__links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    text-decoration: none;
+    font-family: var(--fonte-primaria);
+    border: 1px solid var(--cor-primaria);
+    color: var(--cor-primaria);
+    padding: 10px;
+}
+
+.rodape__contatos__links:hover {
+    background-color: var(--cor-secundaria);
+}
