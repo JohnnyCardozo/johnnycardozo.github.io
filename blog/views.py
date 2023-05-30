@@ -19,3 +19,9 @@ def artigos(request):
 
 def sobre_mim(request):
     return render(request, 'paginas/sobreMim.html')
+
+def publicacao(request):
+    return render(request, 'paginas/publicacao.html')
+
+def cadastro_jogo(request):
+    return render(request, 'paginas/cadastroJogo.html')
