@@ -1,3 +1,5 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,15 +8,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Novo post</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="./styles/style.css">
-    <link rel="stylesheet" href="./styles/formularioArtigo.css">
+    <link rel="stylesheet" href="{% static 'styles/style.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/formularioArtigo.css' %}">
 </head>
 
 <body>
     <header>
         <h1>o que vou escrever</h1>
         <nav class="navegacao">
-            <a class="navegacao__links" href="index.html">INICIO</a>
+            <a class="navegacao__links" href="{% url 'index' %}">INICIO</a>
         </nav>
     </header>
 
@@ -153,7 +155,7 @@
             </fieldset>
 
             <button class="botao__enviar" type="submit">Envie sua publicação</button>
-            <a class="botao__enviar" href="./artigoEscrito.html">ARTIGOS</a>
+            <!-- <a class="botao__enviar" href="./artigoEscrito.html">ARTIGOS</a> -->
         </form>
     </main>
 

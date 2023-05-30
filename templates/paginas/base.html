@@ -1,0 +1,57 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog de jogos</title>
+    <link rel="stylesheet"href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
+    <link rel="stylesheet" href="{% static 'styles/style.css' %}">
+</head>
+
+<body class="estrutura">
+    <header class="cabecalho">
+        <section class="cabecalho__logo__botao">
+            <div class="logo">
+                <img class="logo__imagem" src="{% static 'assets/black dice.png' %}">
+                <h1 class="logo__titulo">Le capitaine
+                    <div class="piscando">_</div>
+                </h1>
+            </div>
+            <a class="botao__editor" href="{% url 'publicacao' %}">Novo post</a>
+            <a class="botao__editor" href="{% url 'cadastroJogo' %}">Cadastrar novo jogo</a>
+        </section>
+        <nav class="navegacao">
+            <a class="navegacao__links" href="{% url 'index' %}">INICIO</a>
+            <a class="navegacao__links" href="{% url 'videoGames' %}">VIDEOGAMES</a>
+            <a class="navegacao__links" href="{% url 'jogosTabuleiro' %}">JOGOS DE TABULEIRO</a>
+            <a class="navegacao__links" href="{% url 'economia' %}">ECONOMIA</a>
+            <a class="navegacao__links" href="{% url 'artigos' %}">ARTIGOS</a>
+            <a class="navegacao__links" href="{% url 'sobreMim' %}">SOBRE MIM</a>
+        </nav>  
+    </header>
+
+    {% block content %}{% endblock %}
+
+    <footer class="rodape">
+        <p class="rodape__texto">Contatos:</p>
+        <div class="rodape__contatos">
+            <a class="rodape__contatos__links" href="mailto:jopecardozo@gmail.com">Email:jopecardozo@gmail.com</a>
+            <a class="rodape__contatos__links" href="https://www.instagram.com/johnny_cardozoo" target="_blank">
+                <img src="{% static 'assets/instagram.png' %}">
+                Instagram
+            </a>
+            <a class="rodape__contatos__links" href="https://github.com/JohnnyCardozo" target="_blank">
+                <img src="{% static 'assets/github.png' %}">
+                Github
+            </a>
+            <a class="rodape__contatos__links" href="https://www.linkedin.com/in/joao-cardozo-/" target="_blank">
+                <img src="{% static 'assets/linkedin.png' %}">
+                Linkedin
+            </a>
+        </div>
+    </footer>
+</body>
+</html>
