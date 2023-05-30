@@ -24,3 +24,6 @@ def publicacao(request):
 
 def cadastro_jogo(request):
     return render(request, 'paginas/cadastroJogo.html')
+
+def artigo_escrito(request):
+    return render(request, 'paginas/artigoEscrito.html')
