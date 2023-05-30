@@ -1,0 +1,22 @@
+{% load static %}
+
+<header class="cabecalho">
+    <section class="cabecalho__logo__botao">
+        <div class="logo">
+            <img class="logo__imagem" src="{% static 'assets/black dice.png' %}">
+            <h1 class="logo__titulo">Le capitaine
+                <div class="piscando">_</div>
+            </h1>
+        </div>
+        <a class="botao__editor" href="{% url 'publicacao' %}">Novo post</a>
+        <a class="botao__editor" href="{% url 'cadastroJogo' %}">Cadastrar novo jogo</a>
+    </section>
+    <nav class="navegacao">
+        <a class="navegacao__links" href="{% url 'index' %}">INICIO</a>
+        <a class="navegacao__links" href="{% url 'videoGames' %}">VIDEOGAMES</a>
+        <a class="navegacao__links" href="{% url 'jogosTabuleiro' %}">JOGOS DE TABULEIRO</a>
+        <a class="navegacao__links" href="{% url 'economia' %}">ECONOMIA</a>
+        <a class="navegacao__links" href="{% url 'artigos' %}">ARTIGOS</a>
+        <a class="navegacao__links" href="{% url 'sobreMim' %}">SOBRE MIM</a>
+    </nav>  
+</header>
