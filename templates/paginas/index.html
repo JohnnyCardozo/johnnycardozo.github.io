@@ -23,7 +23,7 @@
             <div class="swiper-wrapper">
                 {% if cards %}
                 {% for jogos in cards %}
-                <a class="swiper-slide" href="{% url 'artigoEscrito' %}">
+                <a class="swiper-slide" href="{% url 'artigoEscrito' jogos.id %}">
                     <img class="swiper-img" src="{% static 'assets/'%}{{ jogos.imagem }}">
                     <div >
                         <h3 class="swiper-info-nome">{{ jogos.nome }}</h3>
@@ -51,7 +51,7 @@
     <main class="ultimos__artigos">
         {% if cards %}
         {% for jogos in cards %}
-        <a class="ultimos__artigos__informacao" href="{% url 'artigoEscrito' %}">
+        <a class="ultimos__artigos__informacao" href="{% url 'artigoEscrito' jogos.id %}">
             <img class="artigo__imagem" src="{% static 'assets/'%}{{ jogos.imagem }}">
             <div class="artigo__informacao">
                 <h3 class="artigo__nome">{{ jogos.nome }}</h3>

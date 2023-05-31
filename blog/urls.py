@@ -10,5 +10,5 @@ urlpatterns = [
     path('sobreMim/', sobre_mim, name='sobreMim'),
     path('publicacao/', publicacao, name='publicacao'),
     path('cadastroJogo/', cadastro_jogo, name='cadastroJogo'),
-    path('artigoEscrito/', artigo_escrito, name='artigoEscrito'),
+    path('artigoEscrito/<int:artigo_id>', artigo_escrito, name='artigoEscrito'),
 ]

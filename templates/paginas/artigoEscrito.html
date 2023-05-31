@@ -2,5 +2,8 @@
 {% load static %}
 
 {% block content %}
-    <h1>O artigo que escrevi</h1>
+<img class="imagem__artigo" src="{% static 'assets/' %}{{ artigo.imagem }}">
+<h1 class="titulo__artigo">{{ artigo.nome }}</h1>
+<h2 class="legenda__artigo">{{ artigo.legenda }}</h2>
+<p class="texto__artigo">{{ artigo.artigo }}</p>
 {% endblock %}
