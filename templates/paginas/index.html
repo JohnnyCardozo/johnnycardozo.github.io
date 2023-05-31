@@ -21,41 +21,18 @@
             <div class="swiper">
                 <!-- Additional required wrapper -->
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <img class="swiper-img" src="{% static 'assets/Dishonored.png' %}">
-                        <div>
-                            <h3>Postagem 1</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec mollis egestas erat. Integer varius pulvinar augue, id convallis urna sollicitudin quis. Nullam facilisis tortor felis, quis ultrices ligula pretium ut. Nunc sed consequat metus, eu pharetra purus. Mauris id suscipit lorem, ac sagittis justo. Nunc rutrum orci sed sollicitudin dictum. Pellentesque euismod, risus tincidunt rhoncus tincidunt, eros urna luctus nibh, vitae tincidunt dolor odio et est. Fusce scelerisque massa eget sapien rutrum condimentum.</p>
+                    {% if cards %}
+                    {% for imagens in cards %}
+                    <a class="swiper-slide" href="{% url 'artigoEscrito' %}">
+                        <img class="swiper-img" src="{% static 'assets/'%}{{  imagens.imagem}}">
+                        <div >
+                            <h3 class="swiper-info-nome">{{ imagens.nome }}</h3>
+                            <p class="swiper-info-legenda">{{ imagens.legenda }}</p>
                         </div>    
-                    </div>
-                    <div class="swiper-slide">
-                        <img class="swiper-img" src="{% static 'assets/RedStringsClub.png' %}">
-                        <div>
-                            <h3>Postagem 2</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec mollis egestas erat. Integer varius pulvinar augue, id convallis urna sollicitudin quis. Nullam facilisis tortor felis, quis ultrices ligula pretium ut. Nunc sed consequat metus, eu pharetra purus. Mauris id suscipit lorem, ac sagittis justo. Nunc rutrum orci sed sollicitudin dictum. Pellentesque euismod, risus tincidunt rhoncus tincidunt, eros urna luctus nibh, vitae tincidunt dolor odio et est. Fusce scelerisque massa eget sapien rutrum condimentum.</p>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <img class="swiper-img" src="{% static 'assets/hades.png' %}">
-                        <div>
-                            <h3>Postagem 3</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec mollis egestas erat. Integer varius pulvinar augue, id convallis urna sollicitudin quis. Nullam facilisis tortor felis, quis ultrices ligula pretium ut. Nunc sed consequat metus, eu pharetra purus. Mauris id suscipit lorem, ac sagittis justo. Nunc rutrum orci sed sollicitudin dictum. Pellentesque euismod, risus tincidunt rhoncus tincidunt, eros urna luctus nibh, vitae tincidunt dolor odio et est. Fusce scelerisque massa eget sapien rutrum condimentum.</p>
-                        </div>              
-                    </div>
-                    <div class="swiper-slide">
-                        <img class="swiper-img" src="{% static 'assets/Stelaris.png' %}">
-                        <div>
-                            <h3>Postagem 4</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec mollis egestas erat. Integer varius pulvinar augue, id convallis urna sollicitudin quis. Nullam facilisis tortor felis, quis ultrices ligula pretium ut. Nunc sed consequat metus, eu pharetra purus. Mauris id suscipit lorem, ac sagittis justo. Nunc rutrum orci sed sollicitudin dictum. Pellentesque euismod, risus tincidunt rhoncus tincidunt, eros urna luctus nibh, vitae tincidunt dolor odio et est. Fusce scelerisque massa eget sapien rutrum condimentum.</p>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <img class="swiper-img" src="{% static 'assets/disco Elysium.png' %}">
-                        <div>
-                            <h3>Postagem 5</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec mollis egestas erat. Integer varius pulvinar augue, id convallis urna sollicitudin quis. Nullam facilisis tortor felis, quis ultrices ligula pretium ut. Nunc sed consequat metus, eu pharetra purus. Mauris id suscipit lorem, ac sagittis justo. Nunc rutrum orci sed sollicitudin dictum. Pellentesque euismod, risus tincidunt rhoncus tincidunt, eros urna luctus nibh, vitae tincidunt dolor odio et est. Fusce scelerisque massa eget sapien rutrum condimentum.</p>
-                        </div>   
-                    </div>
+                    </a>
+                    {% endfor %}
+                    {% else %}
+                    {% endif %}
                 </div>
                 <!-- If we need pagination -->
                 <div class="swiper-pagination"></div>

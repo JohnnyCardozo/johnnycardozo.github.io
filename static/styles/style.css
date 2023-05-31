@@ -101,9 +101,10 @@ body::-webkit-scrollbar-thumb:hover {
     max-height: 500px;
 }
 
-.swiper-slide h3 {
+.swiper-slide{
     padding-top: 2%;
     border-top: 3px solid var(--cor-primaria);
+    text-decoration: none;
 }
 
 .swiper-slide:hover {
@@ -114,6 +115,10 @@ body::-webkit-scrollbar-thumb:hover {
     width: 100%;
     min-height: 325px;
     max-height: 325px;
+}
+
+.swiper-info-nome {
+    text-decoration: none;
 }
 
 .swiper-button-prev, .swiper-button-next {

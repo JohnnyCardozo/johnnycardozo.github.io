@@ -1,8 +1,11 @@
 from django.shortcuts import render
+from blog.models import ImagensJogos
 
 # Create your views here.
 def index(request):
-    return render(request, 'paginas/index.html')
+    imagens = ImagensJogos.objects.all()
+
+    return render(request, 'paginas/index.html', {"cards": imagens})
 
 def video_games(request):
     return render(request, 'paginas/videoGames.html')
