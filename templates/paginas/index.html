@@ -2,7 +2,7 @@
 {% load static %}
 
 {% block content %}
-    <main class="estrutura__apresentacao">
+    <div class="estrutura__apresentacao">
         <h1 class="apresentacao">
             <p class="apresentacao__destaque">Site focado em jogos.</p> 
             <p>Em qualquer área, em qualquer plataforma.</p>
@@ -13,38 +13,55 @@
             Olá, sou o João "Leskov" Pedro, sou um apaixonado por jogos, 
             economia, IA e outras coisas mais que você pode acompanhar aqui
         </p>
-    </main>
+    </div>
 
-    <section class="carrossel">
-        <h2 class="carrossel__titulo">Ultimas postagens</h2>
+    <div class="carrossel">
+        <h2 class="carrossel__titulo">Novidades</h2>
         <!-- Slider main container -->
-            <div class="swiper">
-                <!-- Additional required wrapper -->
-                <div class="swiper-wrapper">
-                    {% if cards %}
-                    {% for imagens in cards %}
-                    <a class="swiper-slide" href="{% url 'artigoEscrito' %}">
-                        <img class="swiper-img" src="{% static 'assets/'%}{{  imagens.imagem}}">
-                        <div >
-                            <h3 class="swiper-info-nome">{{ imagens.nome }}</h3>
-                            <p class="swiper-info-legenda">{{ imagens.legenda }}</p>
-                        </div>    
-                    </a>
-                    {% endfor %}
-                    {% else %}
-                    {% endif %}
-                </div>
-                <!-- If we need pagination -->
-                <div class="swiper-pagination"></div>
-            
-                <!-- If we need navigation buttons -->
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-button-next"></div>
-            
-                <!-- If we need scrollbar -->
-                <div class="swiper-scrollbar"></div>
+        <div class="swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+                {% if cards %}
+                {% for jogos in cards %}
+                <a class="swiper-slide" href="{% url 'artigoEscrito' %}">
+                    <img class="swiper-img" src="{% static 'assets/'%}{{ jogos.imagem }}">
+                    <div >
+                        <h3 class="swiper-info-nome">{{ jogos.nome }}</h3>
+                        <p class="swiper-info-legenda">{{ jogos.legenda }} Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus similique vitae omnis doloremque atque? Quisquam, autem esse. Temporibus, ea magnam expedita alias earum quibusdam, tenetur odio, numquam possimus error quod.</p>
+                    </div>    
+                </a>
+                {% endfor %}
+                {% else %}
+                {% endif %}
+
             </div>
-    </section>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+        
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        
+            <!-- If we need scrollbar -->
+            <div class="swiper-scrollbar"></div>
+        </div>
+    </div>
+
+    <h4 class="carrossel__titulo">Ultimos artigos</h4>
+    <main class="ultimos__artigos">
+        {% if cards %}
+        {% for jogos in cards %}
+        <a class="ultimos__artigos__informacao" href="{% url 'artigoEscrito' %}">
+            <img class="artigo__imagem" src="{% static 'assets/'%}{{ jogos.imagem }}">
+            <div class="artigo__informacao">
+                <h3 class="artigo__nome">{{ jogos.nome }}</h3>
+                <p class="artigo__legenda">{{ jogos.legenda }} Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos aliquid voluptatum, totam commodi minus vitae fugiat. Sint magni recusandae delectus, ea, eos molestiae ut autem sunt minima labore asperiores beatae. Lorem ipsum dolor, Lorem ipsum dolor, sit amet consectetur adipisicing elit. Possimus veniam modi distinctio doloremque repellat aliquam excepturi vero nulla ut, suscipit facere commodi optio mollitia placeat eligendi nostrum! Aperiam, adipisci rem?</p>
+            </div>    
+        </a>
+        {% endfor %}
+        {% else %}
+        {% endif %}
+    </main>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <script>

@@ -8,7 +8,7 @@
 :root {
     --cor-primaria: green;
     --cor-secundaria: greenyellow;
-    --cor-de-fundo: black;
+    --cor-de-fundo: #101112;
     --cor-do-texto: greenyellow;
     --cor-hover: red;
 
@@ -99,6 +99,8 @@ body::-webkit-scrollbar-thumb:hover {
     width: fit-content;
     min-height: 520px;
     max-height: 500px;
+    color: var(--cor-do-texto);
+    text-decoration: none;
 }
 
 .swiper-slide h3 {
@@ -116,6 +118,14 @@ body::-webkit-scrollbar-thumb:hover {
     max-height: 325px;
 }
 
+.swiper-info-nome {
+    font-family: var(--fonte-primaria);
+}
+
+.swiper-info-legenda {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
 .swiper-button-prev, .swiper-button-next {
     display: none;
 }
@@ -127,6 +137,36 @@ body::-webkit-scrollbar-thumb:hover {
 
 .swiper-scrollbar {
     display: none;
+}
+
+.ultimos__artigos {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 1rem;
+}
+
+.ultimos__artigos__informacao {
+    display: flex;
+    gap: 1rem;
+    border: 3px solid var(--cor-primaria);
+    padding: 0.5rem;
+    text-decoration: none;
+    color: var(--cor-do-texto);
+}
+
+.artigo__imagem {
+    max-width: 400px;
+}
+
+.artigo__nome {
+    font-family: var(--fonte-primaria);
+    border-bottom: 1px solid var(--cor-primaria);
+    margin: 1rem 0;
+    padding-bottom: 1rem;
+}
+
+.artigo__legenda {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 @media (max-width: 1080px) {
@@ -167,5 +207,18 @@ body::-webkit-scrollbar-thumb:hover {
 
     .rodape__contatos__links {
         width: 100%;
+    }
+
+    .ultimos__artigos__informacao {
+        flex-direction: column;
+    }
+
+    .artigo__imagem {
+        width: 100%;
+        max-width: none;
+    }
+
+    .artigo__nome {
+        margin: 0;
     }
 }
