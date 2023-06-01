@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap');
 .imagem__artigo {
     width: 100%;
-    height: 400px;
+    max-height: 400px;
     object-fit: cover;
     object-position: 0% 50%;
 }
@@ -22,9 +22,17 @@
 }
 
 .texto__artigo {
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.5em;
+    max-width: 80%;
     text-align: justify;
-    font-family: 'Lato', sans-serif;
+    font-family: 'Noto Serif', serif;    font-size: larger;
 }
 
 @media (max-width: 1080px) {
+    .imagem__artigo{
+        max-height: 100px;
+    }
+
 }

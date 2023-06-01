@@ -6,7 +6,7 @@ Site criado para falar sobre assuntos que eu gosto, envolvendo o mundo dos jogos
 * CSS3
 * Javascript
 * Swiper.js
-* Futuramente adicionarei o Django para o back-end
+* Django4
 
 ## Feito por:
 ### João "Leskov" Pedro

@@ -22,7 +22,7 @@
             <!-- Additional required wrapper -->
             <div class="swiper-wrapper">
                 {% if cards %}
-                {% for jogos in cards %}
+                {% for jogos in cards|slice:":5" %}
                 <a class="swiper-slide" href="{% url 'artigoEscrito' jogos.id %}">
 
                     {% if jogos.imagem == "" or jogos.imagem == null %}
@@ -56,7 +56,7 @@
     <h4 class="carrossel__titulo">Ultimos artigos</h4>
     <main class="ultimos__artigos">
         {% if cards %}
-        {% for jogos in cards %}
+        {% for jogos in cards|slice:":10" %}
         <a class="ultimos__artigos__informacao" href="{% url 'artigoEscrito' jogos.id %}">
 
             {% if jogos.imagem == "" or jogos.imagem == null %}
