@@ -24,7 +24,13 @@
                 {% if cards %}
                 {% for jogos in cards %}
                 <a class="swiper-slide" href="{% url 'artigoEscrito' jogos.id %}">
-                    <img class="swiper-img" src="{% static 'assets/'%}{{ jogos.imagem }}">
+
+                    {% if jogos.imagem == "" or jogos.imagem == null %}
+                    <img class="swiper-img" src="{% static 'assets/Imagenotfound.png'%}">
+                    {% else %}
+                    <img class="swiper-img" src="{{jogos.imagem.url}}">
+                    {% endif %}
+                    
                     <div >
                         <h3 class="swiper-info-nome">{{ jogos.nome }}</h3>
                         <p class="swiper-info-legenda">{{ jogos.legenda }} Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus similique vitae omnis doloremque atque? Quisquam, autem esse. Temporibus, ea magnam expedita alias earum quibusdam, tenetur odio, numquam possimus error quod.</p>
@@ -52,7 +58,13 @@
         {% if cards %}
         {% for jogos in cards %}
         <a class="ultimos__artigos__informacao" href="{% url 'artigoEscrito' jogos.id %}">
-            <img class="artigo__imagem" src="{% static 'assets/'%}{{ jogos.imagem }}">
+
+            {% if jogos.imagem == "" or jogos.imagem == null %}
+            <img class="artigo__imagem" src="{% static 'assets/Imagenotfound.png'%}">
+            {% else %}
+            <img class="artigo__imagem" src="{{jogos.imagem.url}}">
+            {% endif %}
+
             <div class="artigo__informacao">
                 <h3 class="artigo__nome">{{ jogos.nome }}</h3>
                 <p class="artigo__legenda">{{ jogos.legenda }} Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos aliquid voluptatum, totam commodi minus vitae fugiat. Sint magni recusandae delectus, ea, eos molestiae ut autem sunt minima labore asperiores beatae. Lorem ipsum dolor, Lorem ipsum dolor, sit amet consectetur adipisicing elit. Possimus veniam modi distinctio doloremque repellat aliquam excepturi vero nulla ut, suscipit facere commodi optio mollitia placeat eligendi nostrum! Aperiam, adipisci rem?</p>

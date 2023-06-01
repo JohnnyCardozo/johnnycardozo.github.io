@@ -2,8 +2,15 @@
 {% load static %}
 
 {% block content %}
-<img class="imagem__artigo" src="{% static 'assets/' %}{{ artigo.imagem }}">
+
+{% if artigo.imagem == "" or artigo.imagem == null %}
+<img class="imagem__artigo" src="{% static 'assets/Imagenotfound.png'%}">
+{% else %}
+<img class="imagem__artigo" src="{{ artigo.imagem.url }}">
+{% endif %}
+
 <h1 class="titulo__artigo">{{ artigo.nome }}</h1>
 <h2 class="legenda__artigo">{{ artigo.legenda }}</h2>
 <p class="texto__artigo">{{ artigo.artigo }}</p>
+
 {% endblock %}
